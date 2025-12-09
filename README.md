@@ -3,39 +3,37 @@
 
 Tato databáze slouží k evidenci uživatelů, zákazníků, zaměstnanců, produktů, objednávek a položek objednávek. Umožňuje sledovat vztahy mezi zákazníkem, zaměstnancem, objednávkou a jednotlivými produkty. Součástí jsou také enum typy pro kategorizaci produktů a pracovních pozic. Vybrala jsem si kavárnu, protože v jedné pracuju, proto mě dané téma zajímá.
 
-🏛️ Struktura databáze
+##🏛️ Struktura databáze
 
 <img width="1296" height="738" alt="kavarna" src="https://github.com/user-attachments/assets/747bf669-982a-4438-8ae3-f028c485098d" />
 
-Uzivatel
+###Uzivatel
 
 Evidence základních informací o osobách – jméno, příjmení, email, telefon a datum vytvoření záznamu.
-
-Vztahy:
 
 může být zákazník (tabulka Zakaznik)
 
 může být zaměstnanec (tabulka Zamestnanec)
 
-Zakaznik
+###Zakaznik
 
 Rozšíření pro uživatele, kteří jsou zákazníky.
 
-Obsahuje:
+##Obsahuje:
 
 vazbu na uživatele
 
 věrnostní body
 
-Vztahy:
+##Vztahy:
 
 má více objednávek (tabulka Objednavka)
 
-Zamestnanec
+##Zamestnanec
 
 Rozšíření pro uživatele, kteří pracují v podniku.
 
-Obsahuje:
+###Obsahuje:
 
 vazbu na uživatele
 
@@ -43,7 +41,7 @@ typ pracovní pozice (enum typ_pozice)
 
 datum nástupu
 
-Vztahy:
+###Vztahy:
 
 může obsluhovat více objednávek (Objednavka)
 
@@ -51,8 +49,7 @@ Produkt
 
 Obsahuje nabídku produktů.
 
-Data:
-
+####Data:
 název
 
 cena
@@ -61,15 +58,15 @@ typ produktu (enum typ_produktu)
 
 dostupnost
 
-Vztahy:
+###Vztahy:
 
 může být součástí více položek objednávek (PolozkaObjednavky)
 
-Objednavka
+##Objednavka
 
 Záznam o vytvořené objednávce.
 
-Obsahuje:
+###Obsahuje:
 
 zákazníka
 
@@ -79,7 +76,7 @@ datum a čas
 
 celkovou cenu
 
-Vztahy:
+####Vztahy:
 
 obsahuje více položek (PolozkaObjednavky)
 
@@ -87,7 +84,7 @@ PolozkaObjednavky
 
 Konkrétní produkt v dané objednávce.
 
-Obsahuje:
+####Obsahuje:
 
 vazbu na objednávku
 
@@ -97,7 +94,7 @@ množství
 
 poznámku
 
-🔗 Hlavní vztahy
+##🔗 Hlavní vztahy
 
 Uzivatel 1 ↔ 1 Zakaznik
 
@@ -111,7 +108,7 @@ Objednavka 1 ↔ ∞ PolozkaObjednavky
 
 Produkt 1 ↔ ∞ PolozkaObjednavky
 
-🗂️ Enum typy
+##🗂️ Enum typy
 typ_produktu
 
 káva
