@@ -1,5 +1,5 @@
 # databaze-kavarna
-📌 Přehled databáze
+## 📌 Přehled databáze
 
 Tato databáze slouží k evidenci uživatelů, zákazníků, zaměstnanců, produktů, objednávek a položek objednávek. Umožňuje sledovat vztahy mezi zákazníkem, zaměstnancem, objednávkou a jednotlivými produkty. Součástí jsou také enum typy pro kategorizaci produktů a pracovních pozic. Vybrala jsem si kavárnu, protože v jedné pracuju, proto mě dané téma zajímá.
 
@@ -7,7 +7,7 @@ Tato databáze slouží k evidenci uživatelů, zákazníků, zaměstnanců, pro
 
 <img width="1296" height="738" alt="kavarna" src="https://github.com/user-attachments/assets/747bf669-982a-4438-8ae3-f028c485098d" />
 
-###Uzivatel
+### Uzivatel
 
 Evidence základních informací o osobách – jméno, příjmení, email, telefon a datum vytvoření záznamu.
 
