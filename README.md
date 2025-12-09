@@ -1,7 +1,7 @@
 # databaze-kavarna
 📌 Přehled databáze
 
-Tato databáze slouží k evidenci uživatelů, zákazníků, zaměstnanců, produktů, objednávek a položek objednávek. Umožňuje sledovat vztahy mezi zákazníkem, zaměstnancem, objednávkou a jednotlivými produkty. Součástí jsou také enum typy pro kategorizaci produktů a pracovních pozic.
+Tato databáze slouží k evidenci uživatelů, zákazníků, zaměstnanců, produktů, objednávek a položek objednávek. Umožňuje sledovat vztahy mezi zákazníkem, zaměstnancem, objednávkou a jednotlivými produkty. Součástí jsou také enum typy pro kategorizaci produktů a pracovních pozic. Vybrala jsem si kavárnu, protože v jedné pracuju, proto mě dané téma zajímá.
 
 🏛️ Struktura databáze
 
