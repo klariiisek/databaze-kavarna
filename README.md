@@ -7,6 +7,8 @@ Tato databáze slouží k evidenci uživatelů, zákazníků, zaměstnanců, pro
 
 <img width="1296" height="738" alt="kavarna" src="https://github.com/user-attachments/assets/747bf669-982a-4438-8ae3-f028c485098d" />
 
+https://dbdiagram.io/d/KAVARNA-690dbbd96735e11170b5a894
+
 ### Uzivatel
 
 Evidence základních informací o osobách – jméno, příjmení, email, telefon a datum vytvoření záznamu.
