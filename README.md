@@ -7,63 +7,6 @@ Tato databáze slouží k evidenci uživatelů, zákazníků, zaměstnanců, pro
 
 <img width="1296" height="738" alt="kavarna" src="https://github.com/user-attachments/assets/747bf669-982a-4438-8ae3-f028c485098d" />
 
-enum typ_pozice {
-  majitel
-  manažer
-  brigádník
-}
-
-Table Uzivatel {
-  id_uzivatel integer [pk, increment]
-  jmeno varchar(100)
-  prijmeni varchar(100)
-  email varchar(100)
-  telefon varchar(15)
-  created_at timestamp
-}
-
-Table Zakaznik {
-  id_zakaznika integer [pk, ref: > Uzivatel.id_uzivatel]
-  vernostni_body integer
-}
-
-Table Zamestnanec {
-  id_zamestnance integer [pk, ref: > Uzivatel.id_uzivatel]
-  typ typ_pozice [not null]
-  datum_nastupu date
-}
-
-Table TypProduktu {
-  id_typ_produktu integer [pk, increment]
-  nazev varchar(30)
-}
-
-Table Produkt {
-  id_produktu integer [pk, increment]
-  nazev varchar(100)
-  cena decimal(6,2)
-  dostupnost boolean
-  id_typ_produktu integer [not null, ref: > TypProduktu.id_typ_produktu]
-}
-
-Table Objednavka {
-  id_objednavky integer [pk, increment]
-  id_zakaznika integer [not null, ref: > Zakaznik.id_zakaznika]
-  id_zamestnance integer [not null, ref: > Zamestnanec.id_zamestnance]
-  datum date
-  cas time
-  celkova_cena decimal(7,2)
-}
-
-Table PolozkaObjednavky {
-  id_polozky integer [pk, increment]
-  id_objednavky integer [not null, ref: > Objednavka.id_objednavky]
-  id_produktu integer [not null, ref: > Produkt.id_produktu]
-  mnozstvi integer
-  poznamka text
-}
-
-
 ### Uzivatel
 
 Evidence základních informací o osobách – jméno, příjmení, email, telefon a datum vytvoření záznamu.
